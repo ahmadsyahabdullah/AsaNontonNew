@@ -13,7 +13,7 @@ export async function GET(req: Request) {
       headers: {
         "User-Agent": "Mozilla/5.0",
         "Accept": "application/json, text/plain, */*",
-        "Referer": "http://151.240.0.69:3000/",
+        "Referer": "http://151.240.0.69:3000/\r\n",
         "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
       },
       cache: "no-store",
