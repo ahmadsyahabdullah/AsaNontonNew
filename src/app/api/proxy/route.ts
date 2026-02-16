@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const target = searchParams.get("http://151.240.0.69:3000/api");
+  const target = searchParams.get("url"); // ✅ ini yang benar
 
   if (!target) {
     return NextResponse.json({ error: "Missing url param" }, { status: 400 });
