@@ -16,7 +16,7 @@ $options = [
         "header" => 
             "User-Agent: Mozilla/5.0\r\n" .
             "Accept: application/json\r\n" .
-            "Referer: https://api.sansekai.my.id/api"
+            "Referer: http://151.240.0.69:3000//api"
     ]
 ];
 
