@@ -1,32 +1,31 @@
-<?php
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json");
+import { NextResponse } from "next/server";
 
-if (!isset($_GET['url'])) {
-    http_response_code(400);
-    echo json_encode(["error" => "Missing url"]);
-    exit;
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const target = searchParams.get("http://151.240.0.69:3000/api");
+
+  if (!target) {
+    return NextResponse.json({ error: "Missing url param" }, { status: 400 });
+  }
+
+  try {
+    const response = await fetch(target, {
+      headers: {
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/json",
+      },
+    });
+
+    const data = await response.text();
+
+    return new NextResponse(data, {
+      status: response.status,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+  } catch (error) {
+    return NextResponse.json({ error: "Fetch failed" }, { status: 500 });
+  }
 }
-
-$url = $_GET['url'];
-
-$options = [
-    "http" => [
-        "method" => "GET",
-        "header" => 
-            "User-Agent: Mozilla/5.0\r\n" .
-            "Accept: application/json\r\n" .
-            "Referer: http://151.240.0.69:3000//api"
-    ]
-];
-
-$context = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-
-if ($response === FALSE) {
-    http_response_code(500);
-    echo json_encode(["error" => "Fetch failed"]);
-    exit;
-}
-
-echo $response;
