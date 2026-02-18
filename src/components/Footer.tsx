@@ -20,33 +20,33 @@ export function Footer() {
           {/* <ul className="space-y-2 text-sm">
               <li>
                 <a 
-                  href="https://lynk.id/sansekai/6gdx3w875wx1" 
+                  href="https://instagram.com/ahmad.syahabdullah" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 text-primary hover:underline font-semibold"
                 >
-                  Beli Source Code Website Ini
+                  CEO ASANONTON AHMAD SYAH ABDULLAH
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
           </ul> */}
 
           <p className="text-sm text-muted-foreground text-center">
-            API yang digunakan:{" "}
+            CEO:{" "}
             <a 
-                  href="https://api.sansekai.my.id" 
+                  href="https://instagram.com/ahmad.syahabdullah" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 text-primary hover:underline font-semibold"
                 >
-                  SΛNSΞKΛI API
+                  AHMADSYAHABDULLAH
                   <ExternalLink className="w-3 h-3" />
                 </a>
           </p>
 
           {/* Copyright */}
           <p className="text-xs text-muted-foreground/80 text-center font-medium">
-            © {new Date().getFullYear()} Made with ❤️ by Yusril
+            © {new Date().getFullYear()} Made with ❤️ by AHMADSYAHABDULLAH
           </p>
         </div>
       </div>
